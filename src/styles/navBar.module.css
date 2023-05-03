@@ -1,0 +1,19 @@
+.nav{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    width: 100vw;
+    background-color: darkgrey;
+    height: 2.2em;
+    font-size: 1.5em;
+    font-family: cursive;
+}
+.menuItem{
+    text-decoration: none;
+}
