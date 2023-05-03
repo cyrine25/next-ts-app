@@ -6,24 +6,25 @@ const navBar = (props: Props) => {
   return (
     <nav className={styles.nav}>
     <ul className={styles.menu}>
-      <li className={styles.menuItem}>
-        <Link href="/">
+      <li >
+        <Link href="/" className={styles.menuItem}>
           Home
         </Link>
       </li>
+      
       <li>
-        <Link href="/about">
-          About
+        <Link href="/dashboard" className={styles.menuItem}>
+        Dashboard
         </Link>
       </li>
       <li>
-        <Link href="/navigationPages/firstPage">
-          First Page
+        <Link href="/questions" className={styles.menuItem}>
+        Questions
         </Link>
       </li>
       <li>
-        <Link href="/navigationPages/secondePage">
-          Seconde Page
+        <Link href="/categories" className={styles.menuItem}>
+        Categories
         </Link>
       </li>
     </ul>
