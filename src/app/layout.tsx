@@ -1,13 +1,16 @@
-import styles from '@/styles/layout.module.css'
-import NavBar from '@/components/navBar';
-import Footer from '@/components/footer';
-type MyComponentProps = React.PropsWithChildren<{}>;
+import styles from '@/app/layout.module.scss'
+import Footer from '@/components/footer/footer'
+import NavBar from '@/components/navBar/navBar'
 
-export default function Layout({ children }: MyComponentProps) {
-
-    return <div className={styles.layout}>
-        <NavBar/>
-        <main>{children}</main>
-        <Footer/>
-    </div>
+interface Props {
+  children: React.ReactNode
 }
+
+const Layout = ({ children }: Props) => (
+  <div className={styles.layout}>
+    <NavBar />
+    <body>{children}</body>
+    <Footer />
+  </div>
+)
+export default Layout

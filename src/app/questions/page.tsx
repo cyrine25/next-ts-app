@@ -1,8 +1,6 @@
-
-export default function Page() {
-    return (
-      <div>Questions List</div>
-    )
-  }
-  
-  
+const Page = () => (
+  <div>
+    <h1>Questions List</h1>
+  </div>
+)
+export default Page

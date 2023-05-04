@@ -1,9 +1,8 @@
+import React from 'react'
 
-
-export default function Page() {
-    return (
-      <div>Catégories</div>
-    )
-  }
-  
-  
+const Page = () => (
+  <div>
+    <h1>Catégories</h1>
+  </div>
+)
+export default Page
