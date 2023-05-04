@@ -3,7 +3,7 @@ import Link from 'next/link'
 import styles from '@/components/navBar/navBar.module.scss'
 
 const NavBar = () => (
-  <nav className={styles.nav}>
+  <nav className={styles.nav} data-cy="navbar">
     <ul className={styles.menu}>
       <li>
         <Link href="/" className={styles.menuItem}>

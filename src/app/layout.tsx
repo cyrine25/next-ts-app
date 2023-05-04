@@ -7,10 +7,14 @@ interface Props {
 }
 
 const Layout = ({ children }: Props) => (
-  <div className={styles.layout}>
-    <NavBar />
-    <body>{children}</body>
-    <Footer />
-  </div>
+  <html lang="en">
+    <body>
+      <div className={styles.layout}>
+        <NavBar />
+        <main>{children}</main>
+        <Footer />
+      </div>
+    </body>
+  </html>
 )
 export default Layout
