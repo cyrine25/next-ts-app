@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import styles from '@/components/navBar/navBar.module.scss'
+import styles from './navBar.module.scss'
 
 const NavBar = () => (
   <nav className={styles.nav} data-cy="navbar">
@@ -12,17 +12,17 @@ const NavBar = () => (
       </li>
 
       <li>
-        <Link href="/dashboard" className={styles.menuItem}>
+        <Link href={{ pathname: '/dashboard' }} className={styles.menuItem}>
           Dashboard
         </Link>
       </li>
       <li>
-        <Link href="/questions" className={styles.menuItem}>
+        <Link href={{ pathname: '/questions' }} className={styles.menuItem}>
           Questions
         </Link>
       </li>
       <li>
-        <Link href="/categories" className={styles.menuItem}>
+        <Link href={{ pathname: '/categories' }} className={styles.menuItem}>
           Categories
         </Link>
       </li>

@@ -1,20 +1,13 @@
-import fetchData from '@/api/https'
-interface Question {
-  id: number
-  title: string
-  answer: string
-}
+import fetchQuestions from '@/api/questions'
+import { Question } from '@/domain/question'
 
-interface QuestionListInt {
-  questions: Question[]
-}
 const Page = async () => {
-  const questionsList: QuestionListInt = await fetchData()
+  const questions: ReadonlyArray<Question> = await fetchQuestions()
   return (
     <div>
       <h1>Questions List</h1>
       <div>
-        {questionsList.questions.map(question => (
+        {questions.map(question => (
           <p key={question.id}>{question.title}</p>
         ))}
       </div>

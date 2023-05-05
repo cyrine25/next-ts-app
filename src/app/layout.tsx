@@ -1,6 +1,7 @@
-import styles from '@/app/layout.module.scss'
-import Footer from '@/components/footer/footer'
-import NavBar from '@/components/navBar/navBar'
+import styles from './layout.module.scss'
+
+import Footer from '@/components/footer/Footer'
+import NavBar from '@/components/navBar/NavBar'
 
 interface Props {
   children: React.ReactNode
