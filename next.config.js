@@ -5,6 +5,9 @@ const nextConfig = {
     appDir: true,
     typedRoutes: true,
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 }
 
 module.exports = nextConfig
