@@ -1,16 +1,24 @@
+'use client'
+import { Collapse } from 'antd'
+
+import styles from './Questions.module.scss'
+
 import fetchQuestions from '@/api/questions'
 import { Question } from '@/domain/question'
-
 const Page = async () => {
   const questions: ReadonlyArray<Question> = await fetchQuestions()
+  const { Panel } = Collapse
+
   return (
-    <div>
+    <div className={styles.questions}>
       <h1>Questions List</h1>
-      <div>
+      <Collapse defaultActiveKey={['1']}>
         {questions.map(question => (
-          <p key={question.id}>{question.title}</p>
+          <Panel header={question.title} key={question.id}>
+            <p key={question.id}>{question.answer}</p>
+          </Panel>
         ))}
-      </div>
+      </Collapse>
     </div>
   )
 }

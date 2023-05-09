@@ -1,3 +1,4 @@
+$tw-bg-opacity: 1;
 .nav {
   display: flex;
   justify-content: center;
@@ -9,10 +10,19 @@
   align-items: center;
   list-style-type: none;
   width: 100vw;
-  background-color: darkgrey;
-  height: 2.2em;
-  font-size: 1.5em;
-  font-family: cursive;
+  height: 3em;
+  font-size: 1.2em;
+  background-color: rgb(31, 41, 55, 1);
+  a {
+    color: aliceblue;
+    padding: 0.4em;
+    border-radius: 5%;
+  }
+  li {
+    :hover {
+      background-color: rgba(140, 154, 174, 0.231);
+    }
+  }
 }
 .menuItem {
   text-decoration: none;

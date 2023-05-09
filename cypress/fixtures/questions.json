@@ -1,12 +1,22 @@
 [
   {
     "id": 1,
-    "title": "What is Next.js?",
-    "answer": "Next.js is a React framework for building server-side rendered (SSR) web applications."
+    "title": "question 1",
+    "answer": "Answer 1"
   },
   {
     "id": 2,
-    "title": "What is the difference between Next.js and Create React App?",
-    "answer": "Next.js provides server-side rendering (SSR) out of the box, while Create React App is client-side only. Next.js also provides a file-based routing system and other features such as automatic code splitting, pre-fetching, and more."
+    "title": "question 2",
+    "answer": "Answer 2"
+  },
+  {
+    "id": 3,
+    "title": "question 3",
+    "answer": "Answer 3"
+  },
+  {
+    "id": 4,
+    "title": "question 4",
+    "answer": "Answer 4"
   }
 ]
