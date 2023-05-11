@@ -28,6 +28,11 @@ jobs:
           node-version: '16'
       - name: Install dependencies
         run: npm ci
+      - name: Run linters
+        uses: wearerequired/lint-action@v2
+        with:
+          eslint: true
+          prettier: true
       - name: Build with Next.js
         run: npm run build
       - name: Static HTML export with Next.js

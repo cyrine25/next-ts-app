@@ -1,4 +1,5 @@
-$tw-bg-opacity: 1;
+@import '@/styles/_variables.scss';
+
 .nav {
   display: flex;
   justify-content: center;
@@ -12,18 +13,16 @@ $tw-bg-opacity: 1;
   width: 100vw;
   height: 3em;
   font-size: 1.2em;
-  background-color: rgb(31, 41, 55, 1);
-  a {
-    color: aliceblue;
-    padding: 0.4em;
-    border-radius: 5%;
-  }
+  background-color: $backgroundMenuColor;
   li {
     :hover {
-      background-color: rgba(140, 154, 174, 0.231);
+      background-color: $bgHoverMenuColor;
     }
   }
 }
 .menuItem {
   text-decoration: none;
+  color: $textMenuColor;
+  padding: 0.4em;
+  border-radius: 5%;
 }
