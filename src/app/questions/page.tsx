@@ -15,7 +15,7 @@ const Page = async () => {
       <Collapse defaultActiveKey={['1']}>
         {questions.map(question => (
           <Panel header={question.title} key={question.id}>
-            <p key={question.id}>{question.answer}</p>
+            <p>{question.answer}</p>
           </Panel>
         ))}
       </Collapse>

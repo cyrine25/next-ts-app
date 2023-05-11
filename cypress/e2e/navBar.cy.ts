@@ -1,16 +1,17 @@
 describe('template spec', () => {
   it('passes', () => {
-    cy.visit('http://localhost:3000/dashboard')
+    const baseUrl = Cypress.config().baseUrl
+    cy.visit(`${baseUrl}/dashboard`)
     cy.get('[data-cy="navbar"]')
     cy.get('main h1').contains('Dashboard')
 
-    cy.visit('http://localhost:3000/questions')
+    cy.visit(`${baseUrl}/questions`)
     cy.fixture('questions.json')
       .as('question')
       .then(question => {
         expect(question[1].id).to.eq(2)
       })
-    cy.intercept('GET', 'http://localhost:3000/cypress/fixtures/questions.json')
+    cy.intercept('GET', `${baseUrl}/cypress/fixtures/questions.json`)
     cy.get('@question').then(response => {
       cy.log(JSON.stringify(response))
     })
