@@ -6,7 +6,10 @@ on:
   pull_request:
     branches: ['feat/api-poc']
 
-permissions: write-all
+permissions:
+  contents: read
+  pages: write
+  id-token: read
 
 concurrency:
   group: 'pages'
