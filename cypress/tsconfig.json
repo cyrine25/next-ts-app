@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "jsx": "react",
-    "target": "es6",
-    "lib": ["es6", "dom"],
+    "target": "ES5",
+    "lib": ["ES5", "dom"],
     "types": ["cypress", "node"],
     "baseUrl": "./",
     "paths": {
