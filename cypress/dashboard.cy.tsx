@@ -1,5 +1,3 @@
-import * as React from 'react'
-
 import Dashboard from '@/app/dashboard/page'
 
 describe('<Dashboard />', () => {

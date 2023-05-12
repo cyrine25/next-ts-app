@@ -1,5 +1,3 @@
-import * as React from 'react'
-
 import Question from '@/app/questions/page'
 
 describe('get data from api', () => {
