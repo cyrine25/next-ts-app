@@ -1,5 +1,3 @@
-import data from 'public/data/questions.json'
-
 import { Question } from '@/domain/question'
 
 interface QuestionDTO {
@@ -7,8 +5,10 @@ interface QuestionDTO {
   title: string
   answer: string
 }
+
 const fetchQuestions = async (): Promise<ReadonlyArray<Question>> => {
-  const questions: ReadonlyArray<QuestionDTO> = await data
+  const data = await fetch('http://localhost:5000/questions')
+  const questions: ReadonlyArray<QuestionDTO> = await data.json()
   return questions.map(q => new Question(q.id, q.title, q.answer))
 }
 
