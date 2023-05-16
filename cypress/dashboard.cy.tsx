@@ -1,3 +1,5 @@
+import React = require('react')
+
 import Dashboard from '@/app/dashboard/page'
 
 describe('<Dashboard />', () => {
