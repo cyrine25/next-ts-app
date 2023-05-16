@@ -1,23 +1,24 @@
-import fetchData from '@/api/https'
-interface Question {
-  id: number
-  title: string
-  answer: string
-}
+'use client'
+import { Collapse } from 'antd'
 
-interface QuestionListInt {
-  questions: Question[]
-}
+import styles from './Questions.module.scss'
+
+import fetchQuestions from '@/api/questions'
+import { Question } from '@/domain/question'
 const Page = async () => {
-  const questionsList: QuestionListInt = await fetchData()
+  const questions: ReadonlyArray<Question> = await fetchQuestions()
+  const { Panel } = Collapse
+
   return (
-    <div>
+    <div className={styles.questions}>
       <h1>Questions List</h1>
-      <div>
-        {questionsList.questions.map(question => (
-          <p key={question.id}>{question.title}</p>
+      <Collapse defaultActiveKey={['1']}>
+        {questions.map(question => (
+          <Panel header={question.title} key={question.id}>
+            <p>{question.answer}</p>
+          </Panel>
         ))}
-      </div>
+      </Collapse>
     </div>
   )
 }
