@@ -9,5 +9,5 @@
       "@/*": ["../src/*"]
     }
   },
-  "include": ["**/*.ts", "dashboard.cy.tsx", "navBar.cy.tsx", "cypress.d.ts", "questions.cy.tsx"]
+  "include": ["**/*.ts", "components/*.tsx", "e2e/*.tsx", "cypress.d.ts"]
 }
