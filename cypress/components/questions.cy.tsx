@@ -1,5 +1,3 @@
-import React = require('react')
-
 import QuestionsCollapse from '@/components/questionsCollapse/QuestionsCollapse'
 const questions = [
   { id: 1, title: 'Question 1', answer: 'Answer 1' },
