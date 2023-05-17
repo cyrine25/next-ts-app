@@ -22,7 +22,7 @@ describe('API Tests', () => {
           id: 4,
           title: 'Question 4',
           answer: 'Answer 4',
-        }
+        },
       ])
   })
 })

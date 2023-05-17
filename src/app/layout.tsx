@@ -20,7 +20,6 @@ const Layout = ({ children }: Props) => (
       <div className={styles.layout}>
         <NavBar />
         <main>{children}</main>
-
         <Footer />
       </div>
     </body>
