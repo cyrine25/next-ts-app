@@ -8,12 +8,12 @@ const questions = [
 describe('QuestionsCollapse Component', () => {
   it('Should render the questions with answers', () => {
     cy.intercept('GET', 'http://localhost:5000/questions', { body: questions })
-    cy.mount(<QuestionsCollapse questions={questions} />)
+    cy.mount(<QuestionsCollapse questions={questions} data-cy="questions-collapse" />)
     questions.forEach(question => {
-      cy.get(`.ant-collapse-header-text:contains(${question.title})`).should('exist')
-      cy.get('.ant-collapse-content-box').contains('p', 'Answer 1').should('exist')
-      cy.get(`.ant-collapse-header:contains(${question.title})`).click()
-      cy.get('.ant-collapse-content-box').contains('p', question.answer)
+      cy.get(`[data-cy="question"] .ant-collapse-header-text:contains(${question.title})`).should('exist')
+      cy.get('[data-cy="question"] .ant-collapse-content-box').contains('p', 'Answer 1').should('exist')
+      cy.get(`[data-cy="question"] .ant-collapse-header:contains(${question.title})`).click()
+      cy.get('[data-cy="question"] .ant-collapse-content-box').contains('p', question.answer)
     })
   })
 })

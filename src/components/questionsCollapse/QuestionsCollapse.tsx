@@ -12,7 +12,7 @@ type Props = {
 const QuestionsCollapse = ({ questions }: Props) => (
   <Collapse defaultActiveKey={['1']}>
     {questions.map(question => (
-      <Panel header={question.title} key={question.id}>
+      <Panel header={question.title} key={question.id} data-cy="question">
         <p>{question.answer}</p>
       </Panel>
     ))}

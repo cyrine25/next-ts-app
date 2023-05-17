@@ -9,7 +9,7 @@ const Page = async () => {
   return (
     <div className={styles.questions}>
       <h1>Questions List</h1>
-      <QuestionsCollapse questions={questions} />
+      <QuestionsCollapse questions={questions} data-cy="questions-collapse" />
     </div>
   )
 }
