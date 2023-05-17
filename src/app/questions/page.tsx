@@ -7,7 +7,7 @@ const Page = async () => {
   const questions: ReadonlyArray<Question> = await fetchQuestions()
 
   return (
-    <div className={styles.questions}>
+    <div className={styles.questions} data-cy="Questions">
       <h1>Questions List</h1>
       <QuestionsCollapse questions={questions} data-cy="questions-collapse" />
     </div>
