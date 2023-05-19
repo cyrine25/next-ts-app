@@ -1,3 +1,5 @@
-export class Question {
-  constructor(readonly id: number, readonly title: string, readonly answer: string) {}
+export interface Question {
+  id: number
+  title: string
+  answer: string
 }

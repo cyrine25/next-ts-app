@@ -17,15 +17,15 @@
     "baseUrl": "./",
     "paths": {
       "@/*": ["./src/*"],
-      "react": ["./node_modules/@types/react"]
+      "react": ["./node_modules/@types/react"],
+      "public/*": ["./public/*"]
     },
-
     "plugins": [
       {
         "name": "next"
       }
     ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "./src", "cypress.d.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "./src", "../cypress.d.ts"],
   "exclude": ["node_modules"]
 }

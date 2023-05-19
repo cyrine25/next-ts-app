@@ -1,0 +1,38 @@
+name: Deploy Next.js site to Pages
+
+on:
+  push:
+    branches: ['feat/api-poc']
+  pull_request:
+    branches: ['feat/api-poc']
+
+permissions:
+  checks: write
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: false
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: npm ci
+      - name: Run linters
+        uses: wearerequired/lint-action@v2
+        with:
+          eslint: true
+          prettier: true
+      - name: Build with Next.js
+        run: npm run build

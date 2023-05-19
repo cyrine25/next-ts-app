@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
-    "jsx": "react",
-    "target": "es6",
-    "lib": ["es6", "dom"],
+    "jsx": "react-jsx",
+    "target": "ES5",
+    "lib": ["ES5", "dom"],
     "types": ["cypress", "node"],
     "baseUrl": "./",
     "paths": {
       "@/*": ["../src/*"]
     }
   },
-  "include": ["**/*.ts", "dashboard.cy.tsx", "navBar.cy.tsx", "cypress.d.ts"]
+  "include": ["**/*.ts", "components/*.tsx", "e2e/*.tsx", "cypress.d.ts"]
 }
