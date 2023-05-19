@@ -1,9 +1,9 @@
 import { Inter } from 'next/font/google'
 import React from 'react'
 
+import '@/styles/globals.scss'
 import styles from './layout.module.scss'
 
-import '@/styles/globals.scss'
 import Footer from '@/components/footer/Footer'
 import NavBar from '@/components/navBar/NavBar'
 

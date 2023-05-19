@@ -1,0 +1,28 @@
+@import '@/styles/variables.scss';
+
+.nav {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+.menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  width: 100vw;
+  height: 3em;
+  font-size: 1.2em;
+  background-color: $backgroundMenuColor;
+  li {
+    :hover {
+      background-color: $bgHoverMenuColor;
+    }
+  }
+}
+.menuItem {
+  text-decoration: none;
+  color: $textMenuColor;
+  padding: 0.4em;
+  border-radius: 0.5em;
+}

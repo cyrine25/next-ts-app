@@ -1,4 +1,3 @@
-'use client'
 import { Collapse } from 'antd'
 
 import { Question } from '@/domain/question'
