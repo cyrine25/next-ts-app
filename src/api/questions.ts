@@ -1,7 +1,7 @@
 import { Question } from '@/domain/question'
 
 const fetchQuestions = async (): Promise<ReadonlyArray<Question>> => {
-  const data = await fetch('http://localhost:8080/api/v1/questions')
+  const data = await fetch(`${process.env.API_END_POINT}/questions`)
   const questions: ReadonlyArray<Question> = await data.json()
   return questions.map((q: Question) => ({
     id: q.id,
