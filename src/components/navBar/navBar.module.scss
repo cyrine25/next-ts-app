@@ -1,4 +1,4 @@
-@import '@/styles/_variables.scss';
+@import '@/styles/variables.scss';
 
 .nav {
   display: flex;
@@ -24,5 +24,5 @@
   text-decoration: none;
   color: $textMenuColor;
   padding: 0.4em;
-  border-radius: 5%;
+  border-radius: 0.5em;
 }

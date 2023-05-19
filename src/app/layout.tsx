@@ -1,4 +1,5 @@
 import { Inter } from 'next/font/google'
+import React from 'react'
 
 import styles from './layout.module.scss'
 
@@ -19,7 +20,6 @@ const Layout = ({ children }: Props) => (
       <div className={styles.layout}>
         <NavBar />
         <main>{children}</main>
-
         <Footer />
       </div>
     </body>
