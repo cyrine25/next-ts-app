@@ -1,6 +1,12 @@
+import GreetingInput from '../components/greeting/GreetingInput'
+
 const Page = () => (
-  <div>
+  <>
     <h1 data-cy="dashboard-title">Dashboard</h1>
-  </div>
+    <div>
+      <GreetingInput />
+    </div>
+  </>
 )
+
 export default Page
