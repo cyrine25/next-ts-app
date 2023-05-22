@@ -1,6 +1,4 @@
-'use client'
 import { Collapse } from 'antd'
-import React from 'react'
 
 import { Question } from '@/domain/question'
 

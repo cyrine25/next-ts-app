@@ -1,11 +1,10 @@
 import { Inter } from 'next/font/google'
-import React from 'react'
-
-import styles from './layout.module.scss'
 
 import '@/styles/globals.scss'
-import Footer from '@/components/footer/Footer'
-import NavBar from '@/components/navBar/NavBar'
+
+import Footer from './components/footer/Footer'
+import NavBar from './components/navBar/NavBar'
+import styles from './layout.module.scss'
 
 interface Props {
   children: React.ReactNode
