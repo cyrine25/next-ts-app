@@ -1,3 +1,5 @@
+import Tags from '../components/tags/Tags'
+
 import styles from './Questions.module.scss'
 
 import fetchQuestions from '@/api/questions'
@@ -8,8 +10,13 @@ const QuestionsLoading = async () => {
 
   return (
     <section className={styles.questions} data-cy="Questions">
-      <h1>Questions List</h1>
-      <QuestionsCollapse questions={questions} data-cy="questions-collapse" />
+      <div>
+        <Tags />
+      </div>
+      <div>
+        <h1>Questions List</h1>
+        <QuestionsCollapse questions={questions} data-cy="questions-collapse" />
+      </div>
     </section>
   )
 }
