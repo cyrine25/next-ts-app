@@ -32,9 +32,9 @@ const GreetingInput = () => {
   }
   return (
     <>
-      <input type="text" value={userName} onChange={handleChange} />
+      <input type="text" value={userName} onChange={handleChange} data-cy="Gretting-input" />
       <button onClick={handleGreeting}>Greeting</button>
-      <div>{result}</div>
+      <div data-cy="greeting">{result}</div>
     </>
   )
 }
