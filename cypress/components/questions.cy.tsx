@@ -1,4 +1,4 @@
-import QuestionsCollapse from '@/components/questionsCollapse/QuestionsCollapse'
+import QuestionsCollapse from '@/app/components/questionsCollapse/QuestionsCollapse'
 const questions = [
   { id: 1, title: 'Question 1', answer: 'Answer 1' },
   { id: 2, title: 'Question 2', answer: 'Answer 2' },

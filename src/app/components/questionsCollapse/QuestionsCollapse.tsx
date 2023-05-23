@@ -1,19 +1,16 @@
-import { Collapse } from 'antd'
-
 import { Question } from '@/domain/question'
-
-const { Panel } = Collapse
 type Props = {
   questions: ReadonlyArray<Question>
 }
 
 const QuestionsCollapse = ({ questions }: Props) => (
-  <Collapse defaultActiveKey={['1']}>
+  <div>
     {questions.map(question => (
-      <Panel header={question.title} key={question.id} data-cy="question">
+      <div key={question.id} data-cy="question">
+        <h3>{question.title}</h3>
         <p>{question.answer}</p>
-      </Panel>
+      </div>
     ))}
-  </Collapse>
+  </div>
 )
 export default QuestionsCollapse

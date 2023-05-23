@@ -1,8 +1,7 @@
-import QuestionsCollapse from 'app/components/questionsCollapse/QuestionsCollapse'
-
 import styles from './Questions.module.scss'
 
 import fetchQuestions from '@/api/questions'
+import QuestionsCollapse from '@/app/components/questionsCollapse/QuestionsCollapse'
 import { Question } from '@/domain/question'
 const QuestionsLoading = async () => {
   const questions: ReadonlyArray<Question> = await fetchQuestions()
