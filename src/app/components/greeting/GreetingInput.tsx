@@ -2,17 +2,18 @@
 import { useEffect, useState } from 'react'
 
 import fetchGreetings from '@/api/greetings'
+import { greeting } from '@/domain/greeting'
 
 const GreetingInput = () => {
   const [userName, setUserName] = useState('')
   const [firstName, setFirstName] = useState('')
 
-  const [result, setResult] = useState('')
+  const [result, setResult] = useState({ message: '' })
 
   useEffect(() => {
     const fetchGrettingResult = async () => {
       try {
-        const response: Readonly<string> = await fetchGreetings(firstName)
+        const response: Readonly<greeting> = await fetchGreetings(firstName)
         setResult(response)
       } catch (error) {}
     }
@@ -34,7 +35,7 @@ const GreetingInput = () => {
     <>
       <input type="text" value={userName} onChange={handleChange} data-cy="Gretting-input" />
       <button onClick={handleGreeting}>Greeting</button>
-      <div data-cy="greeting">{result}</div>
+      <div data-cy="greeting">{result.message}</div>
     </>
   )
 }
