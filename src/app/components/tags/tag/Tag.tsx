@@ -1,4 +1,5 @@
 'use client'
+import classNames from 'classnames'
 import { useState } from 'react'
 
 import styles from './tag.module.scss'
@@ -15,12 +16,9 @@ const Tag = ({ tagName }: Props) => {
       setSelectedTags([...selectedTags, tag])
     }
   }
+  const tagBtn = classNames([styles.tag], { [styles.selected]: selectedTags.includes(tagName) })
   return (
-    <button
-      data-cy={`${tagName}-title`}
-      className={`${styles.tag} ${selectedTags.includes(tagName) ? styles.selected : ''}`}
-      onClick={() => handleTagClick(tagName)}
-    >
+    <button data-cy={`${tagName}-title`} className={tagBtn} onClick={() => handleTagClick(tagName)}>
       <div>{tagName}</div>
     </button>
   )

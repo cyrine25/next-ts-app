@@ -7,7 +7,6 @@ import QuestionsCollapse from '@/app/components/questionsCollapse/QuestionsColla
 import { Question } from '@/domain/question'
 const QuestionsLoading = async () => {
   const questions: ReadonlyArray<Question> = await fetchQuestions()
-
   return (
     <section className={styles.questions} data-cy="Questions">
       <div>
