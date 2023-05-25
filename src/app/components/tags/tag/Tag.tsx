@@ -5,19 +5,19 @@ import styles from './tag.module.scss'
 type Props = {
   tagName: string
   key: number
-  onTagClick: (tag: string) => void
+  handleTagClick: (tag: string) => void
 }
-const Tag = ({ tagName, onTagClick }: Props) => {
+const Tag = ({ tagName, handleTagClick }: Props) => {
   const [selected, setSelected] = useState(false)
 
-  const handleTagClick = () => {
+  const handleSelectTag = () => {
     setSelected(!selected)
-    onTagClick(tagName)
+    handleTagClick(tagName)
   }
 
   const tagBtn = classNames([styles.tag], { [styles.selected]: selected })
   return (
-    <button data-cy={`${tagName}-title`} className={tagBtn} onClick={handleTagClick}>
+    <button data-cy={`${tagName}-title`} className={tagBtn} onClick={handleSelectTag}>
       <div>{tagName}</div>
     </button>
   )

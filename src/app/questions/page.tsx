@@ -17,8 +17,8 @@ const QuestionsLoading = () => {
     const fetchQuestionsResult = async () => {
       try {
         const response: ReadonlyArray<Question> = await fetchQuestions()
-        const List = response.filter(question => questionsTags.includes(question.tag))
-        setQuestions(List)
+        const filteredQuestions = response.filter(question => questionsTags.includes(question.tag))
+        setQuestions(filteredQuestions)
       } catch (error) {}
     }
     fetchQuestionsResult()
@@ -27,7 +27,7 @@ const QuestionsLoading = () => {
   return (
     <section className={styles.questions} data-cy="Questions">
       <div>
-        <Tags handleQuestionsTags={setQuestionsTags} />
+        <Tags setQuestionsTags={setQuestionsTags} />
       </div>
       <div>
         <h1>Questions List</h1>
