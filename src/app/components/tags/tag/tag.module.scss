@@ -1,0 +1,19 @@
+@import '@/styles/variables.scss';
+
+.tag {
+  display: inline-block;
+  padding: 0.2em 0.5em 0.3em;
+  border-radius: 0.2em;
+  background: $tag-background;
+  color: $tag-text-color;
+  font-weight: 600;
+  margin: 0.25em 0.1em;
+  font-size: 0.9em;
+  letter-spacing: 0.15ch;
+  border: none;
+  cursor: pointer;
+}
+.selected {
+  background: $selected-tag-background;
+  color: $selected-tag-text-color;
+}

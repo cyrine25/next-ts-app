@@ -2,9 +2,9 @@ name: Deploy Next.js site to Pages
 
 on:
   push:
-    branches: ['feat/api-poc']
+    branches: ['develop']
   pull_request:
-    branches: ['feat/api-poc']
+    branches: ['develop']
 
 permissions:
   checks: write
