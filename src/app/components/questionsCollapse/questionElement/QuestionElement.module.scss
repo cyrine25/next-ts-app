@@ -1,0 +1,60 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixin.scss';
+
+.question {
+  background-color: $question-background-color;
+  border-radius: 1em;
+  padding: 2em;
+  margin-bottom: 2em;
+  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  width: 90vw;
+
+  &:hover {
+    transform: translateY(-0.5em);
+    background-color: $question-hover-background-color;
+  }
+
+  &__title {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.2);
+  }
+
+  &__answer {
+    font-size: 1.125em;
+    margin-bottom: 1em;
+    color: $question-answer-text-color;
+  }
+
+  &__tags {
+    margin-top: 1em;
+
+    & .question__tag {
+      @include tag-styles;
+    }
+  }
+
+  @media screen and (max-width: 48em) {
+    padding: 1.875em;
+    margin-bottom: 1.875em;
+
+    &__title {
+      font-size: 1.25em;
+      margin-bottom: 0.625em;
+    }
+
+    &__answer {
+      font-size: 1em;
+      margin-bottom: 0.625em;
+    }
+
+    &__tags {
+      margin-top: 0.625em;
+
+      & .question__tag {
+        font-size: 0.75em;
+      }
+    }
+  }
+}

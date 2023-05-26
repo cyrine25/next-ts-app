@@ -1,15 +1,21 @@
+import QuestionElement from './questionElement/QuestionElement'
+import styles from './questionsCollapse.module.scss'
+
 import { Question } from '@/domain/question'
 type Props = {
   questions: ReadonlyArray<Question>
 }
 
 const QuestionsCollapse = ({ questions }: Props) => (
-  <div>
+  <div className={styles.questions}>
     {questions.map(question => (
-      <div key={question.id} data-cy="question">
-        <h3>{question.title}</h3>
-        <p>{question.answer}</p>
-      </div>
+      <QuestionElement
+        key={question.id}
+        data-cy="question"
+        title={question.title}
+        answer={question.answer}
+        tag={question.tag}
+      />
     ))}
   </div>
 )

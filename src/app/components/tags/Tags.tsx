@@ -1,6 +1,7 @@
 import { useEffect, useState, Dispatch, SetStateAction } from 'react'
 
 import TagElement from './tag/TagElement'
+import styles from './tags.module.scss'
 
 import { Tag } from '@/domain/question'
 type Props = {
@@ -22,7 +23,7 @@ const Tags = ({ setQuestionsTags }: Props) => {
     }
   }
   return (
-    <div>
+    <div className={styles.tags}>
       {tags.map((tag: string, index: number) => (
         <TagElement tagName={tag} key={index} handleTagClick={handleTagClick} />
       ))}
