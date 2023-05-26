@@ -1,12 +1,14 @@
 import { useEffect, useState, Dispatch, SetStateAction } from 'react'
 
-import Tag from './tag/Tag'
+import TagElement from './tag/TagElement'
+
+import { Tag } from '@/domain/question'
 type Props = {
-  setQuestionsTags: Dispatch<SetStateAction<ReadonlyArray<string>>>
+  setQuestionsTags: Dispatch<SetStateAction<ReadonlyArray<Tag>>>
 }
 const Tags = ({ setQuestionsTags }: Props) => {
   const tags = ['Tag 1', 'Tag 2', 'Tag 3', 'Tag 4', 'Tag 5', 'Tag 6', 'Tag 7', 'Tag 8', 'Tag 9', 'Tag 10']
-  const [selectedTags, setSelectedTags] = useState<ReadonlyArray<string>>([])
+  const [selectedTags, setSelectedTags] = useState<ReadonlyArray<Tag>>([])
 
   useEffect(() => {
     setQuestionsTags(selectedTags)
@@ -22,7 +24,7 @@ const Tags = ({ setQuestionsTags }: Props) => {
   return (
     <div>
       {tags.map((tag: string, index: number) => (
-        <Tag tagName={tag} key={index} handleTagClick={handleTagClick} />
+        <TagElement tagName={tag} key={index} handleTagClick={handleTagClick} />
       ))}
     </div>
   )

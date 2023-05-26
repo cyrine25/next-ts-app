@@ -7,19 +7,17 @@ import styles from './Questions.module.scss'
 
 import fetchQuestions from '@/api/questions'
 import QuestionsCollapse from '@/app/components/questionsCollapse/QuestionsCollapse'
-import { Question } from '@/domain/question'
+import { Question, Tag } from '@/domain/question'
 
 const QuestionsLoading = () => {
-  const [questionsTags, setQuestionsTags] = useState<ReadonlyArray<string>>([])
+  const [questionsTags, setQuestionsTags] = useState<ReadonlyArray<Tag>>([])
   const [questions, setQuestions] = useState<ReadonlyArray<Question>>([])
 
   useEffect(() => {
     const fetchQuestionsResult = async () => {
-      try {
-        const response: ReadonlyArray<Question> = await fetchQuestions()
-        const filteredQuestions = response.filter(question => questionsTags.includes(question.tag))
-        setQuestions(filteredQuestions)
-      } catch (error) {}
+      const response: ReadonlyArray<Question> = await fetchQuestions()
+      const filteredQuestions = response.filter(question => questionsTags.includes(question.tag))
+      setQuestions(filteredQuestions)
     }
     fetchQuestionsResult()
   }, [questionsTags])
