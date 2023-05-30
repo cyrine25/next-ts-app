@@ -8,7 +8,7 @@ type Props = {
   handleTagClick: (tag: string) => void
 }
 const Tag = ({ tagName, handleTagClick }: Props) => {
-  const [selected, setSelected] = useState(false)
+  const [selected, setSelected] = useState<boolean>(false)
 
   const handleSelectTag = () => {
     setSelected(!selected)
