@@ -4,7 +4,7 @@ import '@/styles/globals.scss'
 
 import Footer from './components/footer/Footer'
 import NavBar from './components/navBar/NavBar'
-import styles from './layout.module.scss'
+import styles from './Layout.module.scss'
 
 interface Props {
   children: React.ReactNode
