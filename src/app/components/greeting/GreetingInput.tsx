@@ -12,10 +12,8 @@ const GreetingInput = () => {
 
   useEffect(() => {
     const fetchGrettingResult = async () => {
-      try {
-        const response: Readonly<greeting> = await fetchGreetings(firstName)
-        setResult(response)
-      } catch (error) {}
+      const response: Readonly<greeting> = await fetchGreetings(firstName)
+      setResult(response)
     }
     if (firstName) {
       fetchGrettingResult()

@@ -1,7 +1,8 @@
-.layout {
+.questions {
+  margin: 1em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  gap: 2em;
+  align-items: stretch;
+  width: 90vw;
 }
