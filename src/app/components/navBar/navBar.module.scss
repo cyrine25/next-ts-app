@@ -1,28 +1,48 @@
 @import '@/styles/variables.scss';
 
 .nav {
+  background-color: $backgroundMenuColor;
+  height: 100vh;
   display: flex;
-  justify-content: center;
-  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
 }
 .menu {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: column;
   list-style-type: none;
-  width: 100vw;
-  height: 3em;
-  font-size: 1.2em;
-  background-color: $backgroundMenuColor;
+  padding: 0;
+  margin: 0;
+  width: 200px;
+
   li {
-    :hover {
-      background-color: $bgHoverMenuColor;
-    }
+    display: block;
+    padding: 1em 1em 1em 1.2em;
+    outline: none;
+    box-shadow: inset 0 -1px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
+    letter-spacing: 1px;
+    font-weight: 400;
+    -webkit-transition: background 0.3s, box-shadow 0.3s;
+    transition: background 0.3s, box-shadow 0.3s;
+    text-align: center;
+  }
+  :hover {
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 -1px rgba(0, 0, 0, 0);
+    color: $input-button-text-color;
   }
 }
+
 .menuItem {
   text-decoration: none;
   color: $textMenuColor;
-  padding: 0.4em;
-  border-radius: 0.5em;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.logo {
+  padding-top: 20px;
 }

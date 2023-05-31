@@ -1,9 +1,12 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 import styles from './navBar.module.scss'
-
 const NavBar = () => (
   <nav className={styles.nav} data-cy="navbar">
+    <div className={styles.logo}>
+      <Image src="/assets/logo-capco.png" alt={''} width="90" height="64" />
+    </div>
     <ul className={styles.menu}>
       <li>
         <Link href="/" className={styles.menuItem}>
