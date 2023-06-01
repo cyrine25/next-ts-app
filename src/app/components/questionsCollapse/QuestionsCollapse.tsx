@@ -14,7 +14,7 @@ const QuestionsCollapse = ({ questions }: Props) => (
         data-cy="question"
         title={question.title}
         answer={question.answer}
-        tag={question.tag}
+        tags={question.tags}
       />
     ))}
   </div>

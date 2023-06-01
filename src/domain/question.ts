@@ -2,6 +2,8 @@ export interface Question {
   id: number
   title: string
   answer: string
-  tag: Tag
+  tags: ReadonlyArray<Tag>
 }
-export type Tag = string
+export type Tag = {
+  value: string
+}
