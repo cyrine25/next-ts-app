@@ -49,6 +49,7 @@
     "no-self-compare": "error",
     "no-shadow": "error",
     "no-unused-vars": "off",
+    "react/no-array-index-key": "error",
     "quotes": [
       "error",
       "single",

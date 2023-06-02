@@ -10,13 +10,13 @@ interface QuestionProps {
 
 const QuestionElement = ({ title, answer, tags }: QuestionProps) => (
   <div className={styles.question}>
-    <h2 className={styles.question__title}>Question: {title}</h2>
-    <p className={styles.question__answer}>
+    <h2 className={styles.question_title}>Question: {title}</h2>
+    <p className={styles.question_answer}>
       Answer: <br /> {answer}
     </p>
-    <div className={styles.question__tags}>
-      {tags.map((tag, index) => (
-        <span key={index} className={styles.question__tag}>
+    <div className={styles.question_tags}>
+      {tags.map(tag => (
+        <span key={tag.value} className={styles.question_tag}>
           {tag.value}
         </span>
       ))}

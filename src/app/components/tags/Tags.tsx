@@ -36,8 +36,8 @@ const Tags = ({ setQuestionsTags }: Props) => {
   }
   return (
     <div className={styles.tags}>
-      {tags.map((tag: Tag, index: number) => (
-        <TagElement tagName={tag} key={index} handleTagClick={handleTagClick} />
+      {tags.map((tag: Tag) => (
+        <TagElement tagName={tag} key={tag.value} handleTagClick={handleTagClick} />
       ))}
     </div>
   )

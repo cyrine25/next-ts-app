@@ -8,11 +8,11 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 3.2px 16px;
+  padding: 4px 16px;
   border-radius: 32px;
-  margin: 3px;
+  margin: 4px;
   font-weight: bold;
-  border: 0.8px solid $selected-tag-background;
+  border: 1px solid $selected-tag-background;
   color: $tag-background;
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }

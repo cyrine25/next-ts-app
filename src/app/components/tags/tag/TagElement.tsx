@@ -6,7 +6,7 @@ import styles from './tag.module.scss'
 import { Tag } from '@/domain/question'
 type Props = {
   tagName: Tag
-  key: number
+  key: string
   handleTagClick: (tag: string) => void
 }
 const Tag = ({ tagName, handleTagClick }: Props) => {

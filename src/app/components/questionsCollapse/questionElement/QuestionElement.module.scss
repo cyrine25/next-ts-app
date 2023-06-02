@@ -14,44 +14,44 @@
     background-color: $question-hover-background-color;
   }
 
-  &__title {
+  &_title {
     font-size: 24px;
     font-weight: bold;
     text-shadow: 1.6px 1.6px 3.2px rgba(0, 0, 0, 0.2);
   }
 
-  &__answer {
+  &_answer {
     font-size: 18px;
     margin-bottom: 16px;
     color: $question-answer-text-color;
   }
 
-  &__tags {
+  &_tags {
     margin-top: 16px;
 
-    & .question__tag {
+    & .question_tag {
       @include tag-styles;
     }
   }
 
   @media screen and (max-width: 768px) {
-    padding: 30px;
-    margin-bottom: 30px;
+    padding: 32px;
+    margin-bottom: 32px;
 
-    &__title {
+    &_title {
       font-size: 20px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
-    &__answer {
+    &_answer {
       font-size: 16px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
-    &__tags {
-      margin-top: 10px;
+    &_tags {
+      margin-top: 12px;
 
-      & .question__tag {
+      & .question_tag {
         font-size: 12px;
       }
     }
