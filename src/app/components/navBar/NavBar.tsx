@@ -5,7 +5,7 @@ import styles from './navBar.module.scss'
 const NavBar = () => (
   <nav className={styles.nav} data-cy="navbar">
     <div className={styles.logo}>
-      <Image src="/assets/logo-capco.png" alt={''} width="90" height="64" />
+      <Image src="/assets/logo-capco.png" alt={'logo capco'} width="90" height="64" priority={false} />
     </div>
     <ul className={styles.menu}>
       <li>

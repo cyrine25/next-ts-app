@@ -5,17 +5,21 @@ import { Tag } from '@/domain/question'
 interface QuestionProps {
   title: string
   answer: string
-  tag: Tag
+  tags: ReadonlyArray<Tag>
 }
 
-const QuestionElement = ({ title, answer, tag }: QuestionProps) => (
+const QuestionElement = ({ title, answer, tags }: QuestionProps) => (
   <div className={styles.question}>
-    <h2 className={styles.question__title}>Question: {title}</h2>
-    <p className={styles.question__answer}>
+    <h2 className={styles.question_title}>Question: {title}</h2>
+    <p className={styles.question_answer}>
       Answer: <br /> {answer}
     </p>
-    <div className={styles.question__tags}>
-      <span className={styles.question__tag}>{tag}</span>
+    <div className={styles.question_tags}>
+      {tags.map(tag => (
+        <span key={tag.value} className={styles.question_tag}>
+          {tag.value}
+        </span>
+      ))}
     </div>
   </div>
 )

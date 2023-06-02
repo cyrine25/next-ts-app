@@ -16,7 +16,9 @@ const QuestionsLoading = () => {
   useEffect(() => {
     const fetchQuestionsResult = async () => {
       const response: ReadonlyArray<Question> = await fetchQuestions()
-      const filteredQuestions = response.filter(question => questionsTags.includes(question.tag))
+      const filteredQuestions = response.filter(question =>
+        question.tags.some(tag => questionsTags.some(questionsTag => questionsTag.value === tag.value))
+      )
       setQuestions(filteredQuestions)
     }
     fetchQuestionsResult()

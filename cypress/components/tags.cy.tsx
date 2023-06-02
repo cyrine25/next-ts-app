@@ -5,7 +5,7 @@ describe('Tag component', () => {
   it('fetches and displays the greeting on button click', () => {
     const handleTagClick = cy.stub()
 
-    cy.mount(<TagElement tagName={'Tag 1'} key={1} handleTagClick={handleTagClick} />)
+    cy.mount(<TagElement tagName={{ value: 'Tag 1' }} key={'Tag 1'} handleTagClick={handleTagClick} />)
 
     cy.get('button').click()
     cy.get('button').invoke('attr', 'class').should('contain', 'selected')

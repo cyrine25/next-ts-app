@@ -8,7 +8,18 @@ type Props = {
   setQuestionsTags: Dispatch<SetStateAction<ReadonlyArray<Tag>>>
 }
 const Tags = ({ setQuestionsTags }: Props) => {
-  const tags = ['Tag 1', 'Tag 2', 'Tag 3', 'Tag 4', 'Tag 5', 'Tag 6', 'Tag 7', 'Tag 8', 'Tag 9', 'Tag 10']
+  const tags = [
+    { value: 'Spring Security' },
+    { value: 'Kafka' },
+    { value: 'React' },
+    { value: 'Kotlin' },
+    { value: 'Kubernetes' },
+    { value: 'Docker' },
+    { value: 'Java' },
+    { value: 'Spring Cloud' },
+    { value: 'GCP' },
+    { value: 'Tag 10' },
+  ]
   const [selectedTags, setSelectedTags] = useState<ReadonlyArray<Tag>>([])
 
   useEffect(() => {
@@ -16,16 +27,17 @@ const Tags = ({ setQuestionsTags }: Props) => {
   }, [selectedTags, setQuestionsTags])
 
   const handleTagClick = (tag: string) => {
-    if (selectedTags.includes(tag)) {
-      setSelectedTags(selectedTags.filter(selectedTag => selectedTag !== tag))
+    const existingTag = selectedTags?.find(selectedTag => selectedTag.value === tag)
+    if (existingTag) {
+      setSelectedTags(selectedTags.filter(selectedTag => selectedTag !== existingTag))
     } else {
-      setSelectedTags([...selectedTags, tag])
+      setSelectedTags([...selectedTags, { value: tag }])
     }
   }
   return (
     <div className={styles.tags}>
-      {tags.map((tag: string, index: number) => (
-        <TagElement tagName={tag} key={index} handleTagClick={handleTagClick} />
+      {tags.map((tag: Tag) => (
+        <TagElement tagName={tag} key={tag.value} handleTagClick={handleTagClick} />
       ))}
     </div>
   )
