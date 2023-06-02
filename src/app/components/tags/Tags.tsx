@@ -5,7 +5,7 @@ import TagElement from './tag/TagElement'
 import style from './tags.module.scss'
 
 import { SelectTags, Tag } from '@/domain/question'
-import { tags } from 'public/data/color'
+import { tags } from 'public/data/tags'
 
 type Props = {
   setQuestionsTags: Dispatch<SetStateAction<ReadonlyArray<Tag>>>
