@@ -18,8 +18,14 @@ const Layout = ({ children }: Props) => (
     <body>
       <div className={styles.layout}>
         <NavBar />
-        <main>{children}</main>
-        <Footer />
+        <div className={styles.contentLayout}>
+          <div className={styles.mainContent}>
+            <main>{children}</main>
+          </div>
+          <div className={styles.footerContent}>
+            <Footer />
+          </div>
+        </div>
       </div>
     </body>
   </html>
