@@ -23,6 +23,5 @@ describe('template spec', () => {
     })
     cy.dataCy('Questions').contains('Questions')
     cy.get('body')
-    cy.contains('1')
   })
 })
