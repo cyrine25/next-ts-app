@@ -12,8 +12,8 @@ const Page = async () => {
       <h1>Select Your track:</h1>
       <div className={style.tracks_container}>
         {tracks.map((track: Tracks) => (
-          <div key={track.id} className={style.track}>
-            <Track track={track.track} seniorityLevels={track.seniority_levels} id={track.id} />
+          <div key={track.id} className={style.track} data-cy="Track">
+            <Track track={track.track} seniorityLevels={track.seniority_levels} />
           </div>
         ))}
       </div>
