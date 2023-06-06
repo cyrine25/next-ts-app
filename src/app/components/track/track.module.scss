@@ -1,0 +1,70 @@
+@import '@/styles/variables.scss';
+
+.track_container {
+  background: radial-gradient(circle at 10% 20%, #000000 0%, #404040 90.2%);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.track_header {
+  margin-bottom: 10px;
+}
+
+.track_title {
+  font-size: 24px;
+  color: #bebebe;
+}
+
+.seniority_levels {
+  display: flex;
+  flex-direction: column;
+}
+
+.level {
+  background-color: $tracks-level-bg-color;
+  border-radius: 4px;
+  padding: 6px 12px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  &::before {
+    background: $seniority-level-effect-bg-color;
+    content: '';
+    inset: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out;
+    border-radius: 4px;
+  }
+
+  &:hover::before {
+    border-radius: 4px;
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+.label {
+  font-size: 14px;
+  color: $tracks-label-color;
+  margin-left: 6px;
+  z-index: 1;
+}
+.arrow {
+  width: 10px;
+  height: 10px;
+  border-top: 4px solid $tracks-label-color;
+  border-right: 4px solid $tracks-label-color;
+  border-bottom: 0;
+  border-left: 0;
+  transform: rotate(45deg);
+}

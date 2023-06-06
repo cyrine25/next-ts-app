@@ -1,7 +1,7 @@
 @import '@/styles/variables.scss';
 
 .nav {
-  background-color: $backgroundMenuColor;
+  background: radial-gradient(circle at 24.1% 68.8%, rgb(118 118 118) 0%, rgb(0, 0, 0) 99.4%);
   display: flex;
   flex-direction: column;
   align-items: center;
