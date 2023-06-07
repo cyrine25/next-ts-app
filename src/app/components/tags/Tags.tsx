@@ -1,15 +1,16 @@
 import { useEffect, useState, Dispatch, SetStateAction } from 'react'
 import Select, { MultiValue, StylesConfig } from 'react-select'
 
-import TagElement from './tag/TagElement'
+import TagComponent from './tag/TagComponent'
 import style from './tags.module.scss'
 
-import { SelectTags, Tag } from '@/domain/question'
-import { tags } from 'public/data/tags'
+import { Tag } from '@/domain/question'
+import { SelectTags, tags } from 'public/data/tags'
 
 type Props = {
   setQuestionsTags: Dispatch<SetStateAction<ReadonlyArray<Tag>>>
 }
+
 const Tags = ({ setQuestionsTags }: Props) => {
   const [selectedTags, setSelectedTags] = useState<ReadonlyArray<Tag>>([])
 
@@ -78,7 +79,7 @@ const Tags = ({ setQuestionsTags }: Props) => {
       </div>
       <div className={style.tags}>
         {selectedTags.map((tag: Tag) => (
-          <TagElement tagName={tag} key={tag.value} handleTagClick={handleTagClick} />
+          <TagComponent tagName={tag} key={tag.value} handleTagClick={handleTagClick} />
         ))}
       </div>
     </div>

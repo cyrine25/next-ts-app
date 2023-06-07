@@ -1,5 +1,7 @@
-import { SelectTags } from '@/domain/question'
-
+export interface SelectTags {
+  readonly value: string
+  readonly label: string
+}
 export const tags: ReadonlyArray<SelectTags> = [
   { value: 'Kafka', label: 'Kafka' },
   { value: 'React', label: 'React' },

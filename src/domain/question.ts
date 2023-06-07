@@ -7,7 +7,3 @@ export interface Question {
 export type Tag = {
   value: string
 }
-export interface SelectTags {
-  readonly value: string
-  readonly label: string
-}
