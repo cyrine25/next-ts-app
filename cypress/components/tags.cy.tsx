@@ -1,11 +1,11 @@
-import TagElement from '@/app/components/tags/tag/TagElement'
+import TagComponent from '@/app/components/tags/tag/TagComponent'
 import Tags from '@/app/components/tags/Tags'
 
 describe('Tag component', () => {
   it('fetches and displays the greeting on button click', () => {
     const handleTagClick = cy.stub()
 
-    cy.mount(<TagElement tagName={{ value: 'Tag 1' }} key={'Tag 1'} handleTagClick={handleTagClick} />)
+    cy.mount(<TagComponent tagName={{ value: 'Tag 1' }} key={'Tag 1'} handleTagClick={handleTagClick} />)
 
     cy.get('button').click()
     cy.get('button').invoke('attr', 'class').should('contain', 'selected')
