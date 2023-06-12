@@ -1,0 +1,13 @@
+.tracks {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fill, minmax(100px, 2fr));
+  margin-top: 20px;
+  &_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+    .track {
+      margin-bottom: 20px;
+    }
+  }
+}
