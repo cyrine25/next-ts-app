@@ -1,0 +1,28 @@
+@import '@/styles/variables.scss';
+.input_container {
+  display: flex;
+  align-items: center;
+}
+
+.input_container input[type='text'] {
+  margin-right: 10px;
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid $input-border-color;
+  border-radius: 4px;
+}
+
+.button_container button,
+.input_container button {
+  padding: 9px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: $input-button-background-color;
+  color: #fff;
+  cursor: pointer;
+}
+
+.button_container button:hover,
+.input_container button:hover {
+  background-color: $input-button-background-color;
+}

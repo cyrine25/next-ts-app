@@ -1,6 +1,7 @@
 import { useEffect, useState, Dispatch, SetStateAction } from 'react'
 import Select, { MultiValue, StylesConfig } from 'react-select'
 
+import AddTags from './addTags/AddTags'
 import TagComponent from './tag/TagComponent'
 import style from './tags.module.scss'
 
@@ -25,6 +26,9 @@ const Tags = ({ setQuestionsTags }: Props) => {
     } else {
       setSelectedTags([...selectedTags, { value: tag }])
     }
+  }
+  const handleAddTag = (tag: string) => {
+    setSelectedTags([...selectedTags, { value: tag }])
   }
 
   const customStyles: StylesConfig = {
@@ -62,7 +66,7 @@ const Tags = ({ setQuestionsTags }: Props) => {
   }
   return (
     <div className={style.tags_container}>
-      <div>
+      <div className={style.select_btn_container}>
         <Select
           closeMenuOnSelect={false}
           isMulti
@@ -76,7 +80,9 @@ const Tags = ({ setQuestionsTags }: Props) => {
             setSelectedTags(tags.filter(tag => selectedValues.includes(tag.value)))
           }}
         />
+        <AddTags onAdd={handleAddTag} />
       </div>
+
       <div className={style.tags}>
         {selectedTags.map((tag: Tag) => (
           <TagComponent tagName={tag} key={tag.value} handleTagClick={handleTagClick} />
