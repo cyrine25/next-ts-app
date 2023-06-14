@@ -5,8 +5,8 @@
 }
 
 .input_container input[type='text'] {
-  margin-right: 10px;
-  padding: 10px;
+  margin-right: 12px;
+  padding: 12px;
   background-color: transparent;
   border: 1px solid $input-border-color;
   border-radius: 4px;
@@ -14,7 +14,7 @@
 
 .button_container button,
 .input_container button {
-  padding: 9px 16px;
+  padding: 8px 16px;
   border: none;
   border-radius: 4px;
   background-color: $input-button-background-color;
