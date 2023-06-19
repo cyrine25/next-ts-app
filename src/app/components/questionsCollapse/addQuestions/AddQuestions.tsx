@@ -3,7 +3,12 @@ import { useState, KeyboardEvent, FormEvent } from 'react'
 import styles from './AddQuestions.module.scss'
 
 import { Question, Tag } from '@/domain/question'
-const NewQuestionInput = ({ handleAddQuestion }: { handleAddQuestion: (question: Question) => void }) => {
+
+type Props = {
+  handleAddQuestion: (question: Question) => void
+}
+
+const NewQuestionInput = ({ handleAddQuestion }: Props) => {
   const [title, setTitle] = useState('')
   const [answer, setAnswer] = useState('')
   const [tags, setTags] = useState<ReadonlyArray<Tag>>([])
