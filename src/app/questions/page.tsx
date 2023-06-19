@@ -1,12 +1,12 @@
 'use client'
 import { useEffect, useState } from 'react'
 
-import Tags from '../components/tags/Tags'
-
 import styles from './Questions.module.scss'
 
 import fetchQuestions from '@/api/questions'
+import NewQuestionInput from '@/app/components/questionsCollapse/addQuestions/AddQuestions'
 import QuestionsCollapse from '@/app/components/questionsCollapse/QuestionsCollapse'
+import Tags from '@/app/components/tags/Tags'
 import { Question, Tag } from '@/domain/question'
 
 const QuestionsLoading = () => {
@@ -24,14 +24,22 @@ const QuestionsLoading = () => {
     fetchQuestionsResult()
   }, [questionsTags])
 
+  const handleAddQuestion = (question: Question) => {
+    setQuestions(prevQuestions => [...prevQuestions, question])
+  }
   return (
     <section className={styles.questions} data-cy="Questions">
       <div>
         <Tags setQuestionsTags={setQuestionsTags} />
       </div>
-      <div>
+      <div className={styles.questions_list}>
         <h1>Questions List</h1>
-        <QuestionsCollapse questions={questions} data-cy="questions-collapse" />
+        <div className={styles.questions_container}>
+          <div className={styles.questions_form}>
+            <NewQuestionInput handleAddQuestion={handleAddQuestion} />
+          </div>
+          <QuestionsCollapse questions={questions} data-cy="questions-collapse" />
+        </div>
       </div>
     </section>
   )

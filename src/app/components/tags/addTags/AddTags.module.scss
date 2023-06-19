@@ -1,7 +1,7 @@
 @import '@/styles/variables.scss';
+@import '@/styles/mixin.scss';
 .input_container {
-  display: flex;
-  align-items: center;
+  @include display-flex(row, center, normal);
 }
 
 .input_container input[type='text'] {

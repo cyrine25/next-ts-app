@@ -1,5 +1,5 @@
 @import '@/styles/variables.scss';
-
+@import '@/styles/mixin.scss';
 .track_container {
   background: radial-gradient(circle at 10% 20%, #000000 0%, #404040 90.2%);
   padding: 20px;
@@ -7,9 +7,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 300px;
   height: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  @include display-flex(column, normal, space-between);
 }
 
 .track_header {
@@ -22,8 +20,7 @@
 }
 
 .seniority_levels {
-  display: flex;
-  flex-direction: column;
+  @include display-flex(column, normal, normal);
 }
 
 .level {
@@ -32,8 +29,7 @@
   padding: 6px 12px;
   margin-right: 10px;
   margin-bottom: 10px;
-  display: flex;
-  align-items: center;
+  @include display-flex(row, center, normal);
   position: relative;
   &::before {
     background: $seniority-level-effect-bg-color;

@@ -1,7 +1,26 @@
+@import '@/styles/mixin.scss';
+
 .questions {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  align-items: center;
+  @include display-flex(column, center, space-around);
   gap: 32px;
+}
+.questions_list {
+  width: 80vw;
+  @include display-flex(column, normal, space-between);
+  gap: 24px;
+}
+.questions_container {
+  @include display-flex(row, center, space-between);
+}
+.questions_form {
+  @include display-flex(row, flex-start, space-between);
+  align-self: flex-start;
+  &::after {
+    content: '';
+    position: relative;
+    width: 1px;
+    height: 80vh;
+    background-color: #c5c5c5;
+    left: 40px;
+  }
 }
