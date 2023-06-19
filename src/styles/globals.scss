@@ -16,7 +16,12 @@ html,
 body {
   height: 100vh;
   margin: 0;
-  background: linear-gradient(360deg, #f4f4f4 0%, #c6c6c6 50%, #f4f4f4 100%);
+  background: linear-gradient(
+    360deg,
+    $gradient-background-first-color 0%,
+    $gradient-background-seconde-color 50%,
+    $gradient-background-first-color 100%
+  );
 }
 
 a {

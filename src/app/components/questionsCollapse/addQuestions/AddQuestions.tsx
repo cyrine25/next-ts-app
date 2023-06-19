@@ -40,14 +40,14 @@ const NewQuestionInput = ({ handleAddQuestion }: Props) => {
       }
 
       if (newTag.value !== '' && !tags.some(tag => tag.value === newTag.value)) {
-        setTags(Tags => [...Tags, newTag])
+        setTags(questionTags => [...questionTags, newTag])
         event.currentTarget.value = ''
       }
     }
   }
 
   const handleRemoveTag = (tag: Tag) => {
-    setTags(Tags => Tags.filter(prevTag => prevTag !== tag))
+    setTags(questionTags => questionTags.filter(questionTag => questionTag !== tag))
   }
 
   return (

@@ -1,13 +1,12 @@
 'use client'
 import { useEffect, useState } from 'react'
 
-import NewQuestionInput from '../components/questionsCollapse/addQuestions/AddQuestions'
-import Tags from '../components/tags/Tags'
-
 import styles from './Questions.module.scss'
 
 import fetchQuestions from '@/api/questions'
+import NewQuestionInput from '@/app/components/questionsCollapse/addQuestions/AddQuestions'
 import QuestionsCollapse from '@/app/components/questionsCollapse/QuestionsCollapse'
+import Tags from '@/app/components/tags/Tags'
 import { Question, Tag } from '@/domain/question'
 
 const QuestionsLoading = () => {
