@@ -1,7 +1,7 @@
+@import '@/styles/mixin.scss';
+
 .questions {
   margin: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: stretch;
+  width: 50vw;
+  @include display-flex(column, stretch, center);
 }

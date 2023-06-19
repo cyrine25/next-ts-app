@@ -16,3 +16,16 @@
   color: $tag-background;
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
+@mixin input_text_area_dimensions {
+  width: 25vw;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+@mixin display-flex($flex-direction, $align-items, $justify-content) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}

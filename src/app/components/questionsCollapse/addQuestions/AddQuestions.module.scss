@@ -1,0 +1,54 @@
+@import '@/styles/mixin.scss';
+@import '@/styles/variables.scss';
+.new_question_input {
+  @include display-flex(column, flex-start, flex-start);
+  width: 25vw;
+
+  label {
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+
+  input[type='text'] {
+    @include input_text_area_dimensions;
+  }
+  textarea {
+    @include input_text_area_dimensions;
+    height: 200px;
+  }
+
+  .tag_list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+
+    li {
+      @include display-flex(row, center, normal);
+      background-color: $input-button-text-color;
+      border-radius: 4px;
+      padding: 8px;
+      margin-right: 8px;
+      margin-bottom: 8px;
+
+      button {
+        margin-left: 8px;
+        background-color: $input-button-background-color;
+        color: $input-button-text-color;
+        border: none;
+        border-radius: 4px;
+        padding: 4px 8px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .add_button {
+    background-color: $add-question-button-background-color;
+    color: $input-button-text-color;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+}
